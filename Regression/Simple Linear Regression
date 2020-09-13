@@ -2,6 +2,15 @@ Simple linear Regression
 ========================
 Continous numerical value.
 
+Mathematical Intrepretion
+=========================
+Y = b0 + b1* X
+Salary = b0 + b1 * Experience
+
+Y (salary)      #Dependent Variable
+X (experience)  #Independent Variable
+b0 =Constant    #when Experience is 0, salary is constant{where line cut Y axis}
+b1(cofficient)  #slope of line 
 
 
 
@@ -14,7 +23,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('Salary_Data.csv')
+dataset = pd.read_csv('Data/Salary_Data.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 1].values
 

@@ -65,6 +65,6 @@ plt.show()
 
 #manually pridict salary
 exp1=[12]
-exp=[15]
+exp2=[15]
 salary_pred = regressor.predict([exp1,exp2])
 print(salary_pred)

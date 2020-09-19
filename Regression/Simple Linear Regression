@@ -64,5 +64,7 @@ plt.ylabel('Salary')
 plt.show()
 
 #manually pridict salary
-salary_pred = regressor.predict([[12],[13]])
+exp1=[12]
+exp=[15]
+salary_pred = regressor.predict([exp1,exp2])
 print(salary_pred)

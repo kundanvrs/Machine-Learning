@@ -1,1 +1,28 @@
 
+Installation
+============
+pip install nsetools
+pip install nsetools --upgrade
+
+imports
+=======
+from nsetools import Nse
+
+Stock
+======
+nse = Nse()
+pprint(nse)                               #
+nse.get_index_list()
+nse.get_index_quote("nifty bank") 
+all_stock_codes = nse.get_stock_codes()
+index_codes = nse.get_index_list()
+adv_dec = nse.get_advances_declines()
+top_gainers = nse.get_top_gainers()
+top_losers = nse.get_top_losers()
+nse.is_valid_code('infy')                 #it returns true false
+
+nse.get_fno_lot_sizes()                   #get the F&O lot sizes of all the stocks and indices
+
+
+
+

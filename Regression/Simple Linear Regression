@@ -2,6 +2,8 @@ Simple linear Regression
 ========================
 Continous numerical value.
 
+You can go for it > If the output depend on single(linear) inputs.
+
 Mathematical Intrepretion
 =========================
 Y = b0 + b1* X

@@ -1,13 +1,1 @@
-Important Points :
 
-
-import pandas as pd
-import matplotlib.pyplot as plt
-
-air_quality = pd.read_csv("data/air_quality.csv",index_col=0, parse_dates=True)
-air_quality.plot()
-air_quality["bombay"].plot()
-air_quality.plot.scatter(x="delhi",y="bombay",alpha=0.5)
-air_quality.plot.box()
-
-axs = air_quality.plot.area(figsize=(12, 4), subplots=True)

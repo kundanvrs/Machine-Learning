@@ -1,0 +1,59 @@
+Important Points:
+-DataFrame is consist of rows and column
+-Each column in a DataFrame is a Series
+-Pandas can work on {csv, excel, sql, json, parquet,..} format.
+-Use  prefix read_* to read them {like  pd.read_csv("location")}
+-Use  prefix to_* to export {df.to_excel('df.xlsx', sheet_name='dataframe', index=False)}
+
+
+
+import padas as pd
+
+Create Dataframe
+================
+df = pd.DataFrame({
+     "Name": ["Braund, Mr. Owen Harris",
+              "Allen, Mr. William Henry",
+              "Bonnell, Miss. Elizabeth"],
+     "Age": [22, 35, 58],
+     "Sex": ["male", "male", "female"]}
+                   )
+                   
+df = pd.read_csv("data/data.csv")
+
+Dataframe methods
+=================
+df.head(10)
+df.max()
+df.describe()
+df.tail(10)
+df.dtypes
+df.info()
+df.shape
+type(df)
+
+Dataframe subset
+================
+ages = df["Age"]
+age_sex = df[["Age", "Sex"]]
+above_35 = df[df["Age"] > 35]
+adult_names = df.loc[df["Age"] > 35, "Name"]
+df.iloc[9:25, 2:5]                               #rows 10 till 25 and columns 3 to 5.
+df.iloc[0:3, 3] = "anonymous"                    #assign the name anonymous to the first 3 elements of the third column
+
+
+statistics
+==========
+df["Age"].mean()
+df[["Age", "Fare"]].median()
+df[["Age", "Fare"]].describe()
+
+df.agg({'Age': ['min', 'max', 'median', 'skew'],
+             'Fare': ['min', 'max', 'median', 'mean']})
+        
+df[["Sex", "Age"]].groupby("Sex").mean()
+df.groupby("Sex").mean()
+df["Sex"].value_counts()
+
+df.groupby("Sex")["Sex"].count()
+
